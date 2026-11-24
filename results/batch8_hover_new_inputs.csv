@@ -1,0 +1,5 @@
+input,model,VAF_mean,VAF_std,VAF_min
+doublet x1.5,PINC,99.71,0.09,99.55
+doublet x1.5,plain NN,97.42,0.55,96.62
+hold 0.03 for 1 s,PINC,95.33,1.43,92.83
+hold 0.03 for 1 s,plain NN,76.85,5.35,71.54

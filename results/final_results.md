@@ -14,22 +14,23 @@ All scores: output-error rollout (start from the first measured state, feed the 
 | Plain NN (5 seeds) | 99.8 ± 0.0 | batch6 |
 | PINC (5 seeds) | 99.2 ± 0.1 | batch6 |
 
-### 1-DOF, hover (test doublet_6, 1.46 s open-loop window)
-Networks: Batch 3 design (output = next state), trained on doublet_1-5. Classical rows use Amr's split (train doublet_1-4).
-| Model | VAF [%] | Source |
-|---|---|---|
-| Classical, ANT-X published constants | 0.0 | baseline_vaf.csv |
-| Classical, hand method (impulse constants) | 43.6 | baseline_vaf.csv |
-| Equation, simulation fit | 98.8 | batch1_2b |
-| Equation, inverse-PINN constants | 99.0 | batch1_2b |
-| Plain NN (5 seeds) | 99.0 ± 0.1 | batch3 |
-| PINC (5 seeds) | 99.1 ± 0.1 | batch3 |
-
-### 1-DOF, hover, new inputs never flown (reference = equation with sim-fit constants)
-| Input | PINC | Plain NN | Source |
+### 1-DOF, hover (train doublet_1-4, test doublet_5 and doublet_6, 1.46 s open-loop windows; Batch 8)
+Networks: Batch 3 design (output = next state), physics constants from the simulation fit on doublet_1-4.
+| Model | doublet_5 | doublet_6 | Source |
 |---|---|---|---|
-| doublet x1.5 | 99.75 ± 0.01 | 98.67 ± 0.41 | batch3 |
-| hold M = 0.03 for 1 s | 93.5 ± 3.1 | 78.3 ± 6.5 | batch3 |
+| Classical, ANT-X published constants | 0.0 | 0.0 | baseline_vaf.csv |
+| Classical, hand method (impulse constants) | 59.5 | 43.6 | baseline_vaf.csv |
+| Equation, simulation fit (doublet_1-4) | 56.1 | 97.4 | batch8 |
+| Plain NN (5 seeds) | 58.9 ± 2.2 | 97.9 ± 0.3 | batch8 |
+| PINC (5 seeds) | 65.6 ± 1.7 | 98.9 ± 0.2 | batch8 |
+
+doublet_5 is a hard flight for every model (the equation itself reaches only 56).
+
+### 1-DOF, hover, new inputs never flown (reference = equation with sim-fit constants; Batch 8)
+| Input | PINC | Plain NN |
+|---|---|---|
+| doublet x1.5 | 99.71 ± 0.09 | 97.42 ± 0.55 |
+| hold M = 0.03 for 1 s | 95.3 ± 1.4 | 76.9 ± 5.4 |
 
 ### 2-DOF, position from measured pitch (train velocity_doublet_2,3 + position_1,3)
 | Test flight | ANT-X published (x / v) | SI fit (x / v) | Plain NN (x / v) |
@@ -47,7 +48,8 @@ Networks: Batch 3 design (output = next state), trained on doublet_1-5. Classica
 2-DOF: kbar / cbar = 4.748 / 1.168 (ANT-X), 3.381 / 1.345 (SI fit, ± 0.018 / 0.010).
 
 ## Notes for the report
-- Motors-off networks use one design (Amr's: output = change per step); hover networks use the Batch 3 design (output = next state), which handled the short hover windows better. Same design within each comparison.
+- Motors-off networks use one design (Amr's: output = change per step); hover networks use the Batch 3 design (output = next state) on the shared split (Batch 8). Same design within each comparison.
+- Hover physics needs the windows that stop just before the motor kick-back: the fixed 1.5 s clean windows give xi = 0 (no damping) in the fit (Batch 8 B), which is why Batch 6 hover was poor.
 - PINC wins where data is missing (new inputs, short hover windows: Batch 6 hover PINC 90.8 vs plain NN 9.5 on doublet_6); with plenty of data (motors off) the plain NN fits slightly better.
 
 ## Table 3: direct comparison with Ghezzi's thesis (2-DOF, closed loop; Batch 7, 7b)
@@ -61,7 +63,9 @@ Same models, method (output error) and score (VAF) as the thesis. Train attitude
 | Thesis model refit on our flights | 99.3 | 91.8 | 68.5 |
 | Inverse-PINN constants | 97.0 | 80.0 | - |
 | PINC (5 seeds) | 99.35 ± 0.03 | 95.95 ± 0.15 | 86.75 ± 0.57 |
-| Plain NN (5 seeds, 1 diverged) | 79.7 ± 39.9 | 78.6 ± 39.3 | 77.1 ± 38.5 |
+| Plain NN (5 seeds; 4 work, 1 diverged) | 4 good seeds: 99.6 | 98.3 | 96.4 |
+
+Acceleration VAF depends on how speed is smoothed before differentiating (Batch 8): smoothing over 0.22 / 0.50 / 1.02 s gives refit 51 / 69 / 81, PINC 80 / 87 / 91, plain NN (4 good seeds) 95 / 96 / 97. Ours is computed from the estimated speed; the thesis's measured acceleration may come from the accelerometer, so compare with its 58.7 with care.
 
 ### Closed-loop attitude (pitch setpoint -> pitch), test attitude_doublet_4 / 5
 | Model | VAF pitch | VAF rate | VAF acceleration |
