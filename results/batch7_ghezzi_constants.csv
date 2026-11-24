@@ -1,0 +1,5 @@
+task,model,wn,xi,tau
+CL attitude,Ghezzi thesis (published),16.16,0.56,-
+CL attitude,grey-box refit on our flights,27.387 +- 1.563,0.947 +- 0.037,0.022 +- 0.002
+CL position,Ghezzi thesis (published),3.47,0.84,-
+CL position,grey-box refit on our flights,2.265 +- 0.102,1.132 +- 0.038,0.003 +- 0.016

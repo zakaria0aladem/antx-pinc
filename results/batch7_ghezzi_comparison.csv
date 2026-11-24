@@ -1,0 +1,13 @@
+task,test,model,VAF y,VAF rate,VAF acc
+CL attitude,attitude_doublet_4,Ghezzi constants,98.25005174762018,84.1956289853109,93.71118123402663
+CL attitude,attitude_doublet_4,grey-box refit (ours),99.45971403425436,86.2901517159043,97.39342716747579
+CL attitude,attitude_doublet_4,PINC (5 seeds),99.31 +- 0.03,87.61 +- 0.22,96.97 +- 0.07
+CL attitude,attitude_doublet_4,plain NN (5 seeds),99.66 +- 0.02,96.17 +- 0.15,98.89 +- 0.07
+CL attitude,attitude_doublet_5,Ghezzi constants,98.4854304048668,87.57909042107144,94.7881254291558
+CL attitude,attitude_doublet_5,grey-box refit (ours),99.59825251175141,89.70463644454429,97.53680907639907
+CL attitude,attitude_doublet_5,PINC (5 seeds),99.40 +- 0.03,90.44 +- 0.12,96.86 +- 0.04
+CL attitude,attitude_doublet_5,plain NN (5 seeds),99.59 +- 0.01,95.91 +- 0.07,98.35 +- 0.11
+CL position,position_2,Ghezzi constants,92.87532985345015,27.547152032682543,0
+CL position,position_2,grey-box refit (ours),99.2844113857898,91.79691648944265,68.53810035253103
+CL position,position_2,PINC (5 seeds),99.35 +- 0.03,95.95 +- 0.15,86.75 +- 0.57
+CL position,position_2,plain NN (5 seeds),79.70 +- 39.85,78.62 +- 39.31,77.08 +- 38.54

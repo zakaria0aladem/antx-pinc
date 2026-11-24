@@ -1,0 +1,3 @@
+model,Xu,Xq,Mq,Xdelta,Mdelta,VAF u,VAF q,VAF theta,VAF x
+Ghezzi constants,-0.027,0.7,-7.53,98.29,5.56,0,0.0,0,0.0
+refit on our flights,-10.225,18.493,-17.904,-20.098,8.346,0,16.2,0,77.2
