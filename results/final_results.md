@@ -49,3 +49,38 @@ Networks: Batch 3 design (output = next state), trained on doublet_1-5. Classica
 ## Notes for the report
 - Motors-off networks use one design (Amr's: output = change per step); hover networks use the Batch 3 design (output = next state), which handled the short hover windows better. Same design within each comparison.
 - PINC wins where data is missing (new inputs, short hover windows: Batch 6 hover PINC 90.8 vs plain NN 9.5 on doublet_6); with plenty of data (motors off) the plain NN fits slightly better.
+
+## Table 3: direct comparison with Ghezzi's thesis (2-DOF, closed loop; Batch 7, 7b)
+Same models, method (output error) and score (VAF) as the thesis. Train attitude_doublet_1, 3 / test attitude_doublet_4, 5 (doublet windows); train position_1, 3 / test position_2.
+
+### Closed-loop position (x setpoint -> x), test position_2
+| Model | VAF x | VAF speed | VAF acceleration |
+|---|---|---|---|
+| Thesis, reported on its own drones | 99.45 | - | 58.72 |
+| Thesis constants on our flight | 92.9 | 27.5 | 0.0 |
+| Thesis model refit on our flights | 99.3 | 91.8 | 68.5 |
+| Inverse-PINN constants | 97.0 | 80.0 | - |
+| PINC (5 seeds) | 99.35 ± 0.03 | 95.95 ± 0.15 | 86.75 ± 0.57 |
+| Plain NN (5 seeds, 1 diverged) | 79.7 ± 39.9 | 78.6 ± 39.3 | 77.1 ± 38.5 |
+
+### Closed-loop attitude (pitch setpoint -> pitch), test attitude_doublet_4 / 5
+| Model | VAF pitch | VAF rate | VAF acceleration |
+|---|---|---|---|
+| Thesis, reported | 99.86 | 97.27 | - |
+| Thesis constants | 98.3 / 98.5 | 84.2 / 87.6 | 93.7 / 94.8 |
+| Refit | 99.5 / 99.6 | 86.3 / 89.7 | 97.4 / 97.5 |
+| Inverse-PINN constants | 99.5 / 99.6 | 87.8 / 91.1 | - |
+| PINC (5 seeds) | 99.31 / 99.40 | 87.6 / 90.4 | 97.0 / 96.9 |
+| Plain NN (5 seeds) | 99.66 / 99.59 | 96.2 / 95.9 | 98.9 / 98.4 |
+
+### Constants
+| Model | Thesis | Refit (± from fit) | Inverse PINN (± over 2 flights) |
+|---|---|---|---|
+| CL attitude wn [rad/s] | 16.16 | 27.4 ± 1.6 | 26.4 ± 2.8 |
+| CL attitude xi | 0.56 | 0.95 ± 0.04 | 0.89 ± 0.01 |
+| CL attitude delay [s] | - | 0.022 ± 0.002 | (fixed 0.022) |
+| CL position wn [rad/s] | 3.47 | 2.27 ± 0.10 | 1.27 ± 0.23 |
+| CL position xi | 0.84 | 1.13 ± 0.04 | 0.55 ± 0.14 |
+
+Open-loop longitudinal model (Xu, Xq, Mq, Xdelta, Mdelta): thesis constants give VAF 0 on our logs; refit reaches x VAF 77 only on 2 s restarted windows (does not transfer; our M differs from the thesis delta and our rig has pitch stiffness).
+Inverse PINN on position: NN(t) over a 35 s flight cannot follow the sudden jumps in acceleration at each setpoint step, so its constants come out low; on the short attitude windows it matches the refit.

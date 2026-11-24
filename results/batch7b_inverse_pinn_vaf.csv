@@ -1,0 +1,7 @@
+task,test,model,VAF_y,VAF_rate
+CL attitude,attitude_doublet_4,inverse PINN constants,99.46,87.78
+CL attitude,attitude_doublet_4,grey-box refit constants,99.46,86.36
+CL attitude,attitude_doublet_5,inverse PINN constants,99.59,91.05
+CL attitude,attitude_doublet_5,grey-box refit constants,99.6,89.77
+CL position,position_2,inverse PINN constants,97.0,79.95
+CL position,position_2,grey-box refit constants,99.28,91.78
