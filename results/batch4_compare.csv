@@ -1,0 +1,7 @@
+,,Fit % (simulation),VAF % (simulation),Fit % (1-step)
+motors off,"Equation, sim fit",81.78,97.02,99.84
+motors off,"Equation, inverse PINN",76.34,94.66,99.83
+hover,"Equation, sim fit",83.07,98.66,99.84
+hover,"Equation, inverse PINN",89.38,99.09,99.83
+hover,PINC,83.88,99.34,99.84
+hover,plain NN,82.16,97.35,99.82
