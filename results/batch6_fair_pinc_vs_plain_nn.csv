@@ -1,0 +1,10 @@
+case,test,model,VAF,std,Amr plain NN (impulse-trained)
+motors off,impulse_5,Equation (sim-fit constants),96.86,0.0,99.79
+motors off,impulse_5,PINC,99.23,0.07,99.79
+motors off,impulse_5,plain NN,99.78,0.02,99.79
+hover,doublet_5,Equation (sim-fit constants),98.64,0.0,89.77
+hover,doublet_5,PINC,58.09,4.62,89.77
+hover,doublet_5,plain NN,12.59,17.62,89.77
+hover,doublet_6,Equation (sim-fit constants),85.82,0.0,79.87
+hover,doublet_6,PINC,90.8,3.24,79.87
+hover,doublet_6,plain NN,9.5,15.04,79.87

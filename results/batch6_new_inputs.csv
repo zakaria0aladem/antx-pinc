@@ -1,0 +1,5 @@
+input,model,VAF,std
+doublet x1.5,PINC,85.55,6.3
+doublet x1.5,plain NN,29.85,35.52
+hold 0.03 for 1 s,PINC,17.91,35.58
+hold 0.03 for 1 s,plain NN,8.64,17.29
