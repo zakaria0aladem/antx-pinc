@@ -1,0 +1,5 @@
+,,"VAF vs reference, mean [%]",VAF std,RMSE vs reference [deg]
+doublet x1.5,PINC,99.75,0.01,0.95
+doublet x1.5,plain NN,98.67,0.41,2.13
+hold 0.03 for 1 s,PINC,93.46,3.08,4.97
+hold 0.03 for 1 s,plain NN,78.29,6.48,8.4

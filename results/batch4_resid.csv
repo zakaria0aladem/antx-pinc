@@ -1,0 +1,7 @@
+,,autocorr lags outside band (of 25),crosscorr lags >= 0 outside band (of 26),N samples
+motors off,"Equation, sim fit",19,20,299
+motors off,"Equation, inverse PINN",21,0,299
+hover,"Equation, sim fit",19,17,73
+hover,"Equation, inverse PINN",7,0,73
+hover,PINC,9,18,73
+hover,plain NN,16,10,73

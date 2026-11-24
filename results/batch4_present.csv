@@ -1,0 +1,5 @@
+,,wn [rad/s],xi [-],mu [rad/s^2]
+motors off,"Equation, sim fit",4.083 ± 0.007,0.213 ± 0.003,78.602 ± 0.724
+motors off,"Equation, inverse PINN",4.035 ± 0.012,0.161 ± 0.005,65.485 ± 2.500
+hover,"Equation, sim fit",3.861 ± 0.072,0.136 ± 0.031,182.807 ± 9.093
+hover,"Equation, inverse PINN",3.843 ± 0.295,0.105 ± 0.059,159.925 ± 20.600
