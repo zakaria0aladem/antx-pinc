@@ -50,7 +50,7 @@ doublet_5 is a hard flight for every model (the equation itself reaches only 56)
 ## Notes for the report
 - Motors-off networks use one design (Amr's: output = change per step); hover networks use the Batch 3 design (output = next state) on the shared split (Batch 8). Same design within each comparison.
 - Hover physics needs the windows that stop just before the motor kick-back: the fixed 1.5 s clean windows give xi = 0 (no damping) in the fit (Batch 8 B), which is why Batch 6 hover was poor.
-- PINC wins where data is missing (new inputs, short hover windows: Batch 6 hover PINC 90.8 vs plain NN 9.5 on doublet_6); with plenty of data (motors off) the plain NN fits slightly better.
+- PINC wins where data is scarce or the input is new (hover: best on both test flights; new inputs 95.3 vs 76.9 on the hold). With plenty of data (motors off, closed-loop position, attitude) the plain NN fits measured flights slightly better, but on closed-loop position 1 of its 5 seeds diverges while all 5 PINC seeds work.
 
 ## Table 3: direct comparison with Ghezzi's thesis (2-DOF, closed loop; Batch 7, 7b)
 Same models, method (output error) and score (VAF) as the thesis. Train attitude_doublet_1, 3 / test attitude_doublet_4, 5 (doublet windows); train position_1, 3 / test position_2.
