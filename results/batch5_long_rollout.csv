@@ -1,0 +1,7 @@
+,rollout VAF [%],one-step RMSE [deg],rollout RMSE first 1.0 s [deg],rollout RMSE first 2.0 s [deg],rollout RMSE first 4.0 s [deg],rollout RMSE first 5.9 s [deg]
+"Equation, sim-fit constants",97.009,0.008,0.893,1.096,1.07,0.897
+"Equation, ANT-X published constants",0.0,0.064,64.587,59.428,50.302,43.608
+PINC (mean of 5),97.253,0.008,0.611,1.177,1.046,0.875
+PINC (std),0.087,0.0,0.092,0.1,0.038,0.032
+plain NN (mean of 5),91.999,0.009,0.16,0.363,1.54,1.401
+plain NN (std),1.869,0.001,0.063,0.033,0.158,0.158
