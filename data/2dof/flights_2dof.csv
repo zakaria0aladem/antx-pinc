@@ -1,0 +1,16 @@
+file,kind,duration_s,flying_s,x_range_m,theta_range_deg,m_inj_max,T_hover,usable
+PRBS-ident_log14.csv,PRBS-ident,83.4,38.5,0.023,5.8,0.22699999809265137,0.40700000524520874,NO: x does not move
+PRBS-ident_log15.csv,PRBS-ident,78.2,39.2,0.027,6.7,0.22699999809265137,0.41600000858306885,NO: x does not move
+PRBS-ident_log8.csv,PRBS-ident,76.0,36.9,0.027,7.5,0.22699999809265137,0.4050000011920929,NO: x does not move
+attitude-doublet_log4.csv,attitude-doublet,118.3,32.4,0.379,29.4,0.0,0.4009999930858612,yes
+attitude-doublet_log5.csv,attitude-doublet,63.5,2.0,0.013,0.1,0.0,0.3919999897480011,NO: x does not move
+attitude-doublet_log6.csv,attitude-doublet,84.8,26.0,0.417,29.7,0.0,0.41200000047683716,yes
+attitude-doublet_log7.csv,attitude-doublet,45.2,22.6,0.327,30.0,0.0,0.4180000126361847,yes
+attitude-doublet_log8.csv,attitude-doublet,51.1,19.9,0.37,30.6,0.0,0.3880000114440918,yes
+position_log2.csv,position,44.5,33.4,0.572,48.5,0.0,0.4189999997615814,yes
+position_log39.csv,position,44.8,40.5,0.567,41.5,0.0,0.40799999237060547,yes
+position_log40.csv,position,50.7,45.5,0.598,48.4,0.0,0.4180000126361847,yes
+velocity-doublet_log10.csv,velocity-doublet,52.2,26.7,0.499,43.9,0.0,0.39899998903274536,yes
+velocity-doublet_log11.csv,velocity-doublet,48.1,25.5,0.484,44.3,0.0,0.40799999237060547,yes
+velocity-doublet_log12.csv,velocity-doublet,49.1,24.3,0.475,44.2,0.0,0.414000004529953,yes
+velocity-doublet_log9.csv,velocity-doublet,38.4,0.0,0.014,0.1,0.0,0.0,NO: x does not move
