@@ -4,8 +4,8 @@ from pyulog import ULog
 src, out = sys.argv[1], sys.argv[2]
 KIND={22:'impulse',24:'impulse',25:'impulse',26:'impulse',27:'impulse',
       30:'doublet',31:'doublet',32:'doublet',33:'doublet',34:'doublet',35:'doublet'}
-rows=[]
-for f in sorted(glob.glob(src+'/*.ulg')):
+rows=[]; count={}
+for f in sorted(glob.glob(src+'/*.ulg'), key=lambda s:int(os.path.basename(s).split('_')[1])):   # time order
     n=int(os.path.basename(f).split('_')[1])
     if n not in KIND: continue
     D={}
@@ -23,9 +23,10 @@ for f in sorted(glob.glob(src+'/*.ulg')):
         'm_inj':Z(L['timestamp'],L['m']),'openloop':Z(L['timestamp'],L['type_openloop'].astype(float))})
     df['M']=df.motor_front-df.motor_back; df['T']=(df.motor_front+df.motor_back)/2
     ol=df.openloop.values>0.5; e=np.nonzero(ol)[0]
-    name=f'{KIND[n]}_log{n}.csv'; df.to_csv(out+'/'+name,index=False,float_format='%.6g')
+    count[KIND[n]]=count.get(KIND[n],0)+1
+    name=f'{KIND[n]}_{count[KIND[n]]}.csv'; df.to_csv(out+'/'+name,index=False,float_format='%.6g')
     nz=np.nonzero(df.m_inj.values)[0]
-    rows.append(dict(file=name,kind=KIND[n],duration_s=round(tg[-1],1),inj_start_s=round(tg[nz[0]],2),
+    rows.append(dict(file=name,original_log=f'log_{n}',kind=KIND[n],duration_s=round(tg[-1],1),inj_start_s=round(tg[nz[0]],2),
         ol_start_s=round(tg[e[0]],2),ol_end_s=round(tg[e[-1]],2),m_min=df.m_inj.min(),m_max=df.m_inj.max(),
         T_mean=round(df['T'].mean(),3),theta_range_deg=f"{np.degrees(df.theta.min()):.1f}..{np.degrees(df.theta.max()):.1f}"))
 pd.DataFrame(rows).to_csv(out+'/flights_1dof.csv',index=False); print(pd.DataFrame(rows).to_string())
