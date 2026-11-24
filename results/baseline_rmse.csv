@@ -1,0 +1,19 @@
+case,test_flight,model,signal,RMSE_first_1s,RMSE_first_5s,RMSE_first_10s,RMSE_whole_flight,RMSE_onestep
+1-DOF,impulse_5,"classical, ANT-X published",theta [deg],65.2775,46.6884,,43.4141,0.0030
+1-DOF,impulse_5,"classical, hand method (ours)",theta [deg],0.9306,2.2620,,2.0687,0.0022
+1-DOF,doublet_5,"classical, ANT-X published",theta [deg],10.1353,,,16.2258,0.0026
+1-DOF,doublet_5,"classical, hand method (ours)",theta [deg],3.2099,,,4.8626,0.0030
+1-DOF,doublet_6,"classical, ANT-X published",theta [deg],11.2279,,,12.2994,0.0027
+1-DOF,doublet_6,"classical, hand method (ours)",theta [deg],3.5405,,,7.4708,0.0034
+2-DOF,velocity_doublet_4,ANT-X published,x [m],0.0074,0.0182,0.0860,0.2845,0.0000
+2-DOF,velocity_doublet_4,SI fit (ours),x [m],0.0058,0.0329,0.1193,0.2262,0.0000
+2-DOF,position_2,ANT-X published,x [m],0.0116,0.2098,0.2418,0.3231,0.0000
+2-DOF,position_2,SI fit (ours),x [m],0.0076,0.1335,0.1754,0.1814,0.0000
+2-DOF (extra test),attitude_doublet_1,ANT-X published,x [m],0.0068,0.1834,0.2430,0.1625,0.0000
+2-DOF (extra test),attitude_doublet_1,SI fit (ours),x [m],0.0035,0.1144,0.2006,0.1296,0.0000
+2-DOF (extra test),attitude_doublet_3,ANT-X published,x [m],0.0121,0.1275,0.2864,0.4446,0.0000
+2-DOF (extra test),attitude_doublet_3,SI fit (ours),x [m],0.0086,0.0833,0.1821,0.2859,0.0000
+2-DOF (extra test),attitude_doublet_4,ANT-X published,x [m],0.0163,0.3356,0.5686,0.5958,0.0000
+2-DOF (extra test),attitude_doublet_4,SI fit (ours),x [m],0.0080,0.2064,0.3726,0.4214,0.0000
+2-DOF (extra test),attitude_doublet_5,ANT-X published,x [m],0.0125,0.0973,0.1172,0.0989,0.0001
+2-DOF (extra test),attitude_doublet_5,SI fit (ours),x [m],0.0090,0.0601,0.1341,0.1170,0.0001

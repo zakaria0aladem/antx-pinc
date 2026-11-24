@@ -1,0 +1,19 @@
+case,test_flight,model,VAF_pitch,VAF_pitch_rate,VAF_pitch_acc,VAF_position,VAF_velocity,VAF_acc,onestep_VAF_pitch_rate,VAF_position_5s_restart,VAF_velocity_5s_restart,onestep_VAF_velocity
+1-DOF,impulse_5,"classical, ANT-X published",0.00,0.00,0.00,,,,99.51,,,
+1-DOF,impulse_5,"classical, hand method (ours)",83.09,81.52,77.84,,,,99.99,,,
+1-DOF,doublet_5,"classical, ANT-X published",0.00,0.00,0.00,,,,99.93,,,
+1-DOF,doublet_5,"classical, hand method (ours)",59.53,53.76,57.60,,,,99.97,,,
+1-DOF,doublet_6,"classical, ANT-X published",0.00,0.00,0.00,,,,99.94,,,
+1-DOF,doublet_6,"classical, hand method (ours)",43.62,54.85,56.64,,,,99.97,,,
+2-DOF,velocity_doublet_4,ANT-X published,,,,0.00,82.78,81.28,,66.25,84.28,100.00
+2-DOF,velocity_doublet_4,SI fit (ours),,,,23.66,86.51,93.77,,65.65,89.93,100.00
+2-DOF,position_2,ANT-X published,,,,0.00,9.83,70.80,,2.81,26.44,100.00
+2-DOF,position_2,SI fit (ours),,,,23.22,60.62,88.04,,57.96,66.97,100.00
+2-DOF (extra test),attitude_doublet_1,ANT-X published,,,,0.00,43.97,21.01,,34.55,48.35,99.96
+2-DOF (extra test),attitude_doublet_1,SI fit (ours),,,,56.37,75.73,29.04,,73.77,78.57,99.96
+2-DOF (extra test),attitude_doublet_3,ANT-X published,,,,0.00,21.31,63.61,,21.27,30.60,99.99
+2-DOF (extra test),attitude_doublet_3,SI fit (ours),,,,0.00,67.62,90.32,,62.02,70.83,100.00
+2-DOF (extra test),attitude_doublet_4,ANT-X published,,,,0.00,36.44,71.61,,0.00,39.63,100.00
+2-DOF (extra test),attitude_doublet_4,SI fit (ours),,,,0.00,78.59,94.68,,32.37,79.13,100.00
+2-DOF (extra test),attitude_doublet_5,ANT-X published,,,,59.09,67.94,71.29,,51.82,70.98,100.00
+2-DOF (extra test),attitude_doublet_5,SI fit (ours),,,,66.15,83.83,92.87,,81.87,89.10,100.00

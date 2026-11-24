@@ -1,0 +1,46 @@
+case,test_flight,seed,VAF_pitch,VAF_pitch_rate,RMSE_pitch_deg,VAF_velocity,VAF_position,VAF_position_5s_restart,RMSE_position_m,RMSE_velocity
+1-DOF,impulse_5,0,99.779,99.647,0.464,,,,,
+1-DOF,doublet_5,0,91.813,94.089,2.344,,,,,
+1-DOF,doublet_6,0,88.145,82.815,3.974,,,,,
+2-DOF,velocity_doublet_4,0,,,,91.281,0.000,66.269,0.237,0.048
+2-DOF,position_2,0,,,,95.807,83.845,98.314,0.099,0.019
+2-DOF (extra test),attitude_doublet_1,0,,,,58.528,81.861,88.638,0.055,0.051
+2-DOF (extra test),attitude_doublet_3,0,,,,89.605,67.901,95.185,0.085,0.021
+2-DOF (extra test),attitude_doublet_4,0,,,,85.840,87.903,91.744,0.098,0.036
+2-DOF (extra test),attitude_doublet_5,0,,,,83.253,74.452,82.685,0.073,0.046
+1-DOF,impulse_5,1,99.846,99.631,0.359,,,,,
+1-DOF,doublet_5,1,86.817,78.598,3.970,,,,,
+1-DOF,doublet_6,1,71.729,68.853,6.227,,,,,
+2-DOF,velocity_doublet_4,1,,,,89.872,0.000,68.509,0.179,0.050
+2-DOF,position_2,1,,,,95.798,92.189,98.861,0.057,0.019
+2-DOF (extra test),attitude_doublet_1,1,,,,62.440,69.437,85.860,0.082,0.050
+2-DOF (extra test),attitude_doublet_3,1,,,,88.379,31.206,92.671,0.144,0.024
+2-DOF (extra test),attitude_doublet_4,1,,,,87.015,76.907,91.411,0.065,0.036
+2-DOF (extra test),attitude_doublet_5,1,,,,81.362,47.944,84.057,0.120,0.050
+1-DOF,impulse_5,2,99.791,99.662,0.490,,,,,
+1-DOF,doublet_5,2,90.008,83.366,3.496,,,,,
+1-DOF,doublet_6,2,76.487,77.434,5.649,,,,,
+2-DOF,velocity_doublet_4,2,,,,85.168,0.000,36.197,0.219,0.061
+2-DOF,position_2,2,,,,93.968,69.544,97.975,0.138,0.023
+2-DOF (extra test),attitude_doublet_1,2,,,,60.064,80.346,88.372,0.056,0.050
+2-DOF (extra test),attitude_doublet_3,2,,,,88.189,49.789,93.169,0.110,0.023
+2-DOF (extra test),attitude_doublet_4,2,,,,86.465,83.848,90.287,0.083,0.035
+2-DOF (extra test),attitude_doublet_5,2,,,,82.933,63.668,83.694,0.088,0.047
+1-DOF,impulse_5,3,99.805,99.650,0.433,,,,,
+1-DOF,doublet_5,3,92.700,92.066,2.561,,,,,
+1-DOF,doublet_6,3,90.510,80.189,3.874,,,,,
+2-DOF,velocity_doublet_4,3,,,,85.336,0.000,0.586,0.177,0.060
+2-DOF,position_2,3,,,,92.784,63.347,98.071,0.143,0.025
+2-DOF (extra test),attitude_doublet_1,3,,,,62.917,71.142,81.753,0.069,0.049
+2-DOF (extra test),attitude_doublet_3,3,,,,87.187,41.169,91.502,0.108,0.024
+2-DOF (extra test),attitude_doublet_4,3,,,,86.026,75.675,89.335,0.066,0.037
+2-DOF (extra test),attitude_doublet_5,3,,,,79.833,55.757,81.090,0.100,0.051
+1-DOF,impulse_5,4,99.710,99.596,0.497,,,,,
+1-DOF,doublet_5,4,87.506,81.326,3.952,,,,,
+1-DOF,doublet_6,4,72.460,75.071,6.235,,,,,
+2-DOF,velocity_doublet_4,4,,,,84.072,0.000,28.705,0.276,0.065
+2-DOF,position_2,4,,,,91.046,33.444,97.952,0.218,0.029
+2-DOF (extra test),attitude_doublet_1,4,,,,59.464,80.810,88.690,0.060,0.051
+2-DOF (extra test),attitude_doublet_3,4,,,,88.640,60.940,93.815,0.101,0.022
+2-DOF (extra test),attitude_doublet_4,4,,,,85.953,85.406,90.082,0.091,0.036
+2-DOF (extra test),attitude_doublet_5,4,,,,82.203,67.868,82.377,0.080,0.047

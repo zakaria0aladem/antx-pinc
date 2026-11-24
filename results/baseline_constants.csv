@@ -1,0 +1,5 @@
+model,wn,xi,mu,source,kbar,cbar
+"1-DOF classical, ANT-X published",3.4370,0.0836,358.5000,"Panza 2020 (ANT-X rig, armed motors, their M scaling)",,
+"1-DOF classical, hand method on our flights",4.0800,0.3962,81.2953,"period + settling time of impulse_1..4; mu from first peak of impulse_1..4 (per flight 85.6, 81.5, 77.9, 80.2)",,
+"2-DOF, ANT-X published",,,,"Panza 2021, v1.6 (normalised thrust 0.35)",4.7480,1.1680
+"2-DOF, SI fit on our flights",,,,"fit on velocity_doublet_2, velocity_doublet_3, position_1, position_3; 1-sigma kbar 0.018, cbar 0.010",3.3806,1.3448

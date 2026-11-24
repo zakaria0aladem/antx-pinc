@@ -1,0 +1,19 @@
+# Train / test split, shared with Zakaria (PINC and plain NN train on exactly the same flights).
+# Clean files: data/clean/1dof/<name>.csv and data/clean/2dof/<name>.csv (made by scripts/baselines.py).
+# Windows: impulse = 0.1 s before the push + 6 s; doublet = 0.1 s before + 1.4 s open loop;
+#          2-DOF = whole flight at flight thrust minus 1 s at each end.
+
+1dof_impulse  train      impulse_1 (6.0 s), impulse_2 (6.0 s), impulse_3 (6.0 s), impulse_4 (6.0 s)
+1dof_impulse  test       impulse_5 (6.0 s)
+1dof_doublet  train      doublet_1 (1.5 s), doublet_2 (1.5 s), doublet_3 (1.5 s), doublet_4 (1.5 s)
+1dof_doublet  test       doublet_5 (1.5 s), doublet_6 (1.5 s)
+2dof          train      velocity_doublet_2 (24.7 s), velocity_doublet_3 (23.5 s), position_1 (38.5 s), position_3 (31.4 s)
+2dof          test       velocity_doublet_4 (22.3 s), position_2 (43.5 s)
+2dof          extra_test attitude_doublet_1 (30.4 s), attitude_doublet_3 (44.8 s), attitude_doublet_4 (20.6 s), attitude_doublet_5 (17.9 s)
+
+# Not used:
+#   attitude_doublet_2: x does not move
+#   velocity_doublet_1: no flight
+#   prbs_1: x does not move (pitch only)
+#   prbs_2: x does not move (pitch only)
+#   prbs_3: x does not move (pitch only)

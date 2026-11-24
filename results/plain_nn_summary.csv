@@ -1,0 +1,10 @@
+case,test_flight,VAF_pitch_mean,VAF_pitch_std,VAF_pitch_rate_mean,VAF_pitch_rate_std,RMSE_pitch_deg_mean,RMSE_pitch_deg_std,VAF_velocity_mean,VAF_velocity_std,VAF_position_mean,VAF_position_std,VAF_position_5s_restart_mean,VAF_position_5s_restart_std,RMSE_position_m_mean,RMSE_position_m_std,RMSE_velocity_mean,RMSE_velocity_std
+1-DOF,impulse_5,99.786,0.049,99.637,0.026,0.448,0.056,,,,,,,,,,
+1-DOF,doublet_5,89.769,2.582,85.889,6.814,3.265,0.769,,,,,,,,,,
+1-DOF,doublet_6,79.866,8.865,76.872,5.343,5.192,1.182,,,,,,,,,,
+2-DOF,velocity_doublet_4,,,,,,,87.146,3.208,0.000,0.000,40.053,28.277,0.218,0.042,0.057,0.007
+2-DOF,position_2,,,,,,,93.881,2.039,68.474,22.656,98.235,0.378,0.131,0.060,0.023,0.004
+2-DOF (extra test),attitude_doublet_1,,,,,,,60.683,1.910,76.719,5.926,86.663,2.987,0.064,0.011,0.050,0.001
+2-DOF (extra test),attitude_doublet_3,,,,,,,88.400,0.870,50.201,14.758,93.268,1.366,0.110,0.022,0.023,0.001
+2-DOF (extra test),attitude_doublet_4,,,,,,,86.260,0.484,81.948,5.380,90.572,0.991,0.081,0.015,0.036,0.001
+2-DOF (extra test),attitude_doublet_5,,,,,,,81.917,1.374,61.938,10.354,82.781,1.172,0.092,0.018,0.048,0.002
