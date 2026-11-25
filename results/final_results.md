@@ -88,3 +88,40 @@ Acceleration VAF depends on how speed is smoothed before differentiating (Batch 
 
 Open-loop longitudinal model (Xu, Xq, Mq, Xdelta, Mdelta): thesis constants give VAF 0 on our logs; refit reaches x VAF 77 only on 2 s restarted windows (does not transfer; our M differs from the thesis delta and our rig has pitch stiffness).
 Inverse PINN on position: NN(t) over a 35 s flight cannot follow the sudden jumps in acceleration at each setpoint step, so its constants come out low; on the short attitude windows it matches the refit.
+
+## Table 4: Batch 9 improvements (notebooks/batch9_improvements.ipynb)
+One design for every case: output = change per step, 5 seeds, 10k epochs. Hover here uses the kick-back windows with this design, so hover numbers differ from Batch 8 (Batch 3 design); keep Batch 8 for the hover comparison.
+
+### Learned constants, physics weight, ensembles (VAF of y; median of 5 seeds, seeds with VAF > 50 in brackets)
+| Model | Motors off, impulse_5 | Hover, doublet_6 | CL position, position_2 (x / acc) |
+|---|---|---|---|
+| Equation, sim fit | 96.9 | 97.3 | 99.3 / 68.1 |
+| Plain NN | 99.8 (5/5) | 92.3 (4/5) | 99.6 / 96.4 (4/5) |
+| PINC, fixed constants, w 1 | 99.3 (5/5) | 99.3 (5/5) | 99.3 / 86.7 (5/5) |
+| PINC, learned constants, w 1 | 99.3 (5/5) | 99.3 (5/5) | 99.2 / 94.1 (5/5) |
+| PINC, learned constants, w 0.1 | 99.5 (5/5) | 98.9 (5/5) | 95.6 / 61.9 (4/5) |
+| Equation with PINC-learned constants | 88.8 | 98.3 | 98.9 / 84.3 |
+
+- Learned constants: PINC acceleration on position 86.7 -> 94.1, close to the plain NN (96.4) with all 5 seeds working. Small or no change elsewhere.
+- Physics weight 0.1: slightly better motors off (99.5), clearly worse on position (acc 62, 1 seed fails). Keep w = 1.
+- Ensemble (average of 5 seeds): little change, except the plain NN on hover doublet_5 (45 -> 67).
+- Hover doublet_5 stays hard for every model (best 77, equation with PINC-learned constants).
+- Learned constants (mean of 5): motors off wn 3.97, xi 0.139, mu 65.8 (sim fit 4.07 / 0.212 / 76.9); hover 3.80 / 0.074 / 146 (sim fit 3.73 / 0.138 / 204); position wn 1.54, xi 0.72 (sim fit 2.25 / 1.13).
+
+### Inverse PINN on position, one fit per setpoint step
+| Model | wn | xi | VAF x | VAF v |
+|---|---|---|---|---|
+| Inverse PINN, whole flight (Batch 7b) | 1.27 | 0.55 | 97.0 | 80.0 |
+| Inverse PINN, one fit per step | 1.41 | 0.63 | 98.2 | 88.7 |
+| Simulation fit | 2.25 | 1.13 | 99.3 | 91.7 |
+
+Per-step fits move toward the simulation fit but stay far from it; single segments scatter widely (wn 0.3 to 2.8).
+
+### Better equations
+- Friction + level offset in the cart model (v' = -cbar v - kbar (theta - theta_b) - Fc tanh(v/0.01)): x VAF 23.2 -> 90.7 on position_2, 23.6 -> 56.2 on velocity_doublet_4 (v 60.6 -> 95.0 and 86.5 -> 91.5). Fitted kbar 3.55, cbar 0.35, Fc 0.15.
+- sin(theta) instead of theta in the pitch equation: no change (96.9 vs 96.9 motors off).
+
+### ANT-X check (2026-11-25, three independent checks)
+- Same push (M 0.1 for 0.2 s, motors off), raw logs: ANT-X lab rig (log X0038) peak 33.5 deg, swing 1.8 s, each swing keeps 74 % of the last; our rig 17.3 deg, 1.5 s, 34 %. Our rig is faster and far more damped.
+- Our simulation fit on the ANT-X log: wn 3.445 (published 3.437), xi 0.042, mu 85, VAF 98.4. The ANT-X equation and our method agree; the constants belong to each rig.
+- Published set (3.437 / 0.0836 / 358.5) scores 0 even on the ANT-X log: mu 358.5 is a hover gain, wn and xi come from a motors-off push.
