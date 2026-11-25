@@ -1,0 +1,7 @@
+test,model,VAF_x,VAF_v,kbar,cbar,Fc,thb
+velocity_doublet_4,ANT-X published,0.0,82.79,4.75,1.17,,
+velocity_doublet_4,linear fit (Amr),23.6,86.51,3.38,1.35,,
+velocity_doublet_4,friction + level offset,56.24,91.51,3.55,0.35,0.15,-0.01
+position_2,ANT-X published,0.0,9.85,4.75,1.17,,
+position_2,linear fit (Amr),23.2,60.61,3.38,1.35,,
+position_2,friction + level offset,90.72,94.97,3.55,0.35,0.15,-0.01

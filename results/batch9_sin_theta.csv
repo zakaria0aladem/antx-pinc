@@ -1,0 +1,4 @@
+case,test,VAF_linear,VAF_sin,wn_linear,wn_sin
+motors off,impulse_5,96.915,96.897,4.065,4.081
+hover,doublet_5,44.397,45.154,3.725,3.763
+hover,doublet_6,97.349,97.345,3.725,3.763

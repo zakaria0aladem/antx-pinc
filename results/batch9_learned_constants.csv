@@ -1,0 +1,10 @@
+case,model,wn,xi,mu,th0
+motors off,simulation fit,4.065,0.2123,76.9296,0.0007
+motors off,"PINC, learned constants, w 1 (mean +- std)",3.9664 +- 0.0131,0.1388 +- 0.0020,65.7630 +- 0.0950,-0.0039 +- 0.0004
+motors off,"PINC, learned constants, w 0.1 (mean +- std)",3.8948 +- 0.0341,0.1232 +- 0.0020,61.0343 +- 0.7545,-0.0021 +- 0.0015
+hover,simulation fit,3.7253,0.138,203.612,-0.1868
+hover,"PINC, learned constants, w 1 (mean +- std)",3.7994 +- 0.0067,0.0741 +- 0.0027,145.7741 +- 0.8555,-0.1346 +- 0.0016
+hover,"PINC, learned constants, w 0.1 (mean +- std)",3.8196 +- 0.0581,0.0345 +- 0.0029,117.7252 +- 4.1272,-0.1031 +- 0.0080
+CL position,simulation fit,2.2491,1.127,,
+CL position,"PINC, learned constants, w 1 (mean +- std)",1.5359 +- 0.0061,0.7172 +- 0.0023,,
+CL position,"PINC, learned constants, w 0.1 (mean +- std)",1.3754 +- 0.0286,0.6431 +- 0.0240,,

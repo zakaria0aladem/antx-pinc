@@ -1,0 +1,9 @@
+input,model,VAF_median,VAF_min,VAF_ensemble
+doublet x1.5,plain NN,0.0,0.0,0.0
+doublet x1.5,"PINC, fixed constants, w 1",81.07,41.96,87.1
+doublet x1.5,"PINC, learned constants, w 1",68.24,63.35,72.6
+doublet x1.5,"PINC, learned constants, w 0.1",57.84,0.0,77.49
+hold 0.03 for 1 s,plain NN,61.12,0.0,58.25
+hold 0.03 for 1 s,"PINC, fixed constants, w 1",65.06,0.0,57.62
+hold 0.03 for 1 s,"PINC, learned constants, w 1",51.79,0.0,65.74
+hold 0.03 for 1 s,"PINC, learned constants, w 0.1",10.15,0.0,57.58

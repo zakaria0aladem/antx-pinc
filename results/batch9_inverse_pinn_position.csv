@@ -1,0 +1,4 @@
+model,wn,xi,VAF_x,VAF_v
+"inverse PINN, whole flight (Batch 7b)",1.268,0.55,97.0,79.95
+"inverse PINN, one fit per step",1.406,0.626,98.206,88.706
+simulation fit,2.249,1.127,99.281,91.709
