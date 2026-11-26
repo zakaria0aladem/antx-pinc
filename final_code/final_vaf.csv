@@ -1,4 +1,4 @@
-case,test,model,VAF_y,VAF_acc
+case,test,model,VAF_z,VAF_acc
 motors off,impulse_5,"solver, simulation-fit constants",96.91498321814372,
 motors off,impulse_5,"solver, inverse-PINN constants",94.33187620296857,
 motors off,impulse_5,"solver, ANT-X published constants",0,
