@@ -1,0 +1,12 @@
+case,test,model,VAF_y,VAF_acc
+motors off,impulse_5,"solver, simulation-fit constants",96.91498321814372,
+motors off,impulse_5,"solver, inverse-PINN constants",94.33187620296857,
+motors off,impulse_5,"solver, ANT-X published constants",0,
+motors off,impulse_5,plain NN (5 seeds),99.8 ± 0.0 (median 99.8),
+motors off,impulse_5,PINC (5 seeds),99.3 ± 0.1 (median 99.3),
+motors off,impulse_5,"PINC, learned constants (5 seeds)",99.3 ± 0.1 (median 99.3),
+CL position,position_2,"solver, simulation-fit constants",99.29118629137143,69.43712124182655
+CL position,position_2,"solver, thesis constants (Ghezzi)",93.11661048121,0
+CL position,position_2,plain NN (5 seeds),79.7 ± 44.6 (median 99.6),77.0 ± 43.1 (median 96.3)
+CL position,position_2,PINC (5 seeds),99.4 ± 0.0 (median 99.3),85.5 ± 0.6 (median 85.7)
+CL position,position_2,"PINC, learned constants (5 seeds)",97.4 ± 2.9 (median 99.2),87.0 ± 11.4 (median 93.4)

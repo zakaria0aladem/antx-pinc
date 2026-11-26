@@ -1,0 +1,11 @@
+test,model,VAF
+doublet_5,"solver, simulation-fit constants",56.1
+doublet_5,PINC (5 seeds),65.6 ± 1.7
+doublet_5,plain NN (5 seeds),58.9 ± 2.2
+doublet_6,"solver, simulation-fit constants",97.4
+doublet_6,PINC (5 seeds),98.9 ± 0.2
+doublet_6,plain NN (5 seeds),97.9 ± 0.3
+new command: doublet x1.5,PINC (5 seeds),99.7 ± 0.1
+new command: doublet x1.5,plain NN (5 seeds),97.4 ± 0.6
+new command: hold 0.03 for 1 s,PINC (5 seeds),95.3 ± 1.4
+new command: hold 0.03 for 1 s,plain NN (5 seeds),76.9 ± 5.4
